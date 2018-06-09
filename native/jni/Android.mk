@@ -34,6 +34,12 @@ LOCAL_CFLAGS += -Werror -Wall -Wextra -Weffc++ -Wformat=2 -Wcast-qual -Wcast-ali
 # To suppress compiler warnings for unused variables/functions used for debug features etc.
 LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-function
 
+# Added so build doesn't fail with NDK
+LOCAL_CFLAGS += -Wno-tautological-constant-compare
+
+# Probably bug in llvm-libc++/include/__bsd_locale_fallbacks.h
+LOCAL_CFLAGS += -Wno-format-nonliteral
+
 # HACK: -mstackrealign is required for x86 builds running on pre-KitKat devices to avoid crashes
 # with SSE instructions.
 ifeq ($(TARGET_ARCH), x86)
