@@ -1,1 +1,1 @@
-include ':java', ':common'
+include ':java', ':common', ':native'
