@@ -21,6 +21,9 @@ android {
             java.srcDirs = ['src', '../java-overridable/src', '../inputmethodcommon/java']
         }
     }
+    aaptOptions {
+        noCompress '.dict'
+    }
 }
 
 dependencies {
