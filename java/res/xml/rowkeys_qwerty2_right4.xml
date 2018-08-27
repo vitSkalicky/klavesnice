@@ -33,4 +33,8 @@
     <Key
         latin:keySpec="l"
         latin:moreKeys="!text/morekeys_l" />
+    <Key
+        latin:keySpec="´"
+        latin:altCode="0x301"
+        latin:moreKeys="" />
 </merge>
