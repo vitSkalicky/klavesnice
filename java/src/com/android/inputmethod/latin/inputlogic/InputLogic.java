@@ -32,6 +32,7 @@ import android.view.inputmethod.EditorInfo;
 import com.android.inputmethod.compat.SuggestionSpanUtils;
 import com.android.inputmethod.event.Event;
 import com.android.inputmethod.event.InputTransaction;
+import com.android.inputmethod.keyboard.AccentHandler;
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.keyboard.KeyboardSwitcher;
 import com.android.inputmethod.latin.Dictionary;
@@ -108,6 +109,12 @@ public final class InputLogic {
     // The word being corrected while the cursor is in the middle of the word.
     // Note: This does not have a composing span, so it must be handled separately.
     private String mWordBeingCorrectedByCursor = null;
+
+    /**
+     * Accent handler for better accent keys support. {@link #sendKeyCodePoint(SettingsValues, int)}
+      */
+
+    private AccentHandler mAccrentHandler = new AccentHandler();
 
     /**
      * Create a new instance of the input logic.
@@ -1992,10 +1999,10 @@ public final class InputLogic {
     private void sendKeyCodePoint(final SettingsValues settingsValues, final int codePoint) {
         // TODO: Remove this special handling of digit letters.
         // For backward compatibility. See {@link InputMethodService#sendKeyChar(char)}.
-        if (codePoint >= '0' && codePoint <= '9') {
+        /*if (codePoint >= '0' && codePoint <= '9') {
             sendDownUpKeyEvent(codePoint - '0' + KeyEvent.KEYCODE_0);
             return;
-        }
+        }*/
 
         // TODO: we should do this also when the editor has TYPE_NULL
         if (Constants.CODE_ENTER == codePoint && settingsValues.isBeforeJellyBean()) {
@@ -2005,7 +2012,16 @@ public final class InputLogic {
             // relying on this behavior so we continue to support it for older apps.
             sendDownUpKeyEvent(KeyEvent.KEYCODE_ENTER);
         } else {
-            mConnection.commitText(StringUtils.newSingleCodePointString(codePoint), 1);
+
+            // solving accent keys problem here
+            String orig = StringUtils.newSingleCodePointString(codePoint);
+            if (orig.length() == 1){
+                String nevv = mAccrentHandler.handleAccent(orig.charAt(0));
+                mConnection.commitText(nevv,1);
+            }else {
+                mConnection.commitText(orig, 1);
+            }
+
         }
     }
 
