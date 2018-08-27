@@ -34,21 +34,20 @@
     >
         <include
             latin:keyboardLayout="@xml/rowkeys_qwerty2"
-            latin:keyXPos="5%p" />
+            />
     </Row>
     <Row
         latin:keyWidth="10%p"
     >
         <Key
             latin:keyStyle="shiftKeyStyle"
-            latin:keyWidth="15%p"
-            latin:visualInsetsRight="1%p" />
+            latin:visualInsetsRight="0%p" />
         <include
             latin:keyboardLayout="@xml/rowkeys_qwerty3" />
         <Key
             latin:keyStyle="deleteKeyStyle"
             latin:keyWidth="fillRight"
-            latin:visualInsetsLeft="1%p" />
+            latin:visualInsetsLeft="0%p" />
     </Row>
     <include
         latin:keyboardLayout="@xml/row_qwerty4" />
