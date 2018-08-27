@@ -22,7 +22,8 @@
 
 <!-- Supported subtypes
     keyboard_locale: script_name/keyboard_layout_set
-    cs: Czech/qwerty
+    cs_QWERTY: Czech/qwerty
+    cs_QWERTZ: Czech/qwertz
     (zz: Emoji/emoji)
     -->
 <!-- TODO: use <lang>_keyboard icon instead of a common keyboard icon. -->
@@ -38,7 +39,7 @@
    <subtype android:icon="@drawable/ic_ime_switcher_dark"
         android:label="@string/subtype_diacritic_qwerty"
         android:subtypeId="0x2d3d2ed0"
-        android:imeSubtypeLocale="cs"
+        android:imeSubtypeLocale="cs_QWERTY"
         android:imeSubtypeMode="keyboard"
         android:imeSubtypeExtraValue="AsciiCapable,SupportTouchPositionCorrection,EmojiCapable"
         android:isAsciiCapable="true"
@@ -46,7 +47,7 @@
     <subtype android:icon="@drawable/ic_ime_switcher_dark"
         android:label="@string/subtype_diacritic_qwertz"
         android:subtypeId="0x2d3d2ed1"
-        android:imeSubtypeLocale="cs"
+        android:imeSubtypeLocale="cs_QWERTZ"
         android:imeSubtypeMode="keyboard"
         android:imeSubtypeExtraValue="AsciiCapable,SupportTouchPositionCorrection,EmojiCapable"
         android:isAsciiCapable="true"

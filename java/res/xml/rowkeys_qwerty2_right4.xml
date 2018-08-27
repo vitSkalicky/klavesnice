@@ -34,7 +34,7 @@
         latin:keySpec="l"
         latin:moreKeys="!text/morekeys_l" />
     <Key
-        latin:keySpec="´"
-        latin:altCode="0x301"
+        latin:keySpec="&#x301;"
+        latin:altCode="&#x301;"
         latin:moreKeys="" />
 </merge>

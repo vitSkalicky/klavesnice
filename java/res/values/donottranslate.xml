@@ -64,8 +64,11 @@
 
     <!-- Compatibility map from subtypeLocale:subtypeExtraValue to keyboardLayoutSet -->
     <string-array name="locale_and_extra_value_to_keyboard_layout_set_map">
-        <item>cs:AsciiCapable,SupportTouchPositionCorrection,EmojiCapable</item>
+        <item>cs_QWERTZ:AsciiCapable,SupportTouchPositionCorrection,EmojiCapable</item>
+        <item>qwertz</item>
+        <item>cs_QWERTY:AsciiCapable,SupportTouchPositionCorrection,EmojiCapable</item>
         <item>qwerty</item>
+
         <!--<item>cs:AsciiCapable,SupportTouchPositionCorrection,EmojiCapable</item>
         <item>qwertz</item>-->
     </string-array>
