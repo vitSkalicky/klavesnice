@@ -27,9 +27,9 @@
         android:title="@string/settings_screen_accounts"
         android:key="screen_accounts" />
     <PreferenceScreen
-        android:fragment="com.android.inputmethod.latin.settings.AppearanceSettingsFragment"
-        android:title="@string/settings_screen_appearance"
-        android:key="screen_appearance" />
+        android:fragment="com.android.inputmethod.latin.settings.ThemeSettingsFragment"
+        android:key="screen_theme"
+        android:title="@string/settings_screen_theme" />
     <PreferenceScreen
         android:fragment="com.android.inputmethod.latin.settings.GestureSettingsFragment"
         android:title="@string/settings_screen_gesture"
