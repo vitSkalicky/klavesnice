@@ -152,6 +152,9 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
     private final BatchInputArbiter mBatchInputArbiter;
     private final GestureStrokeDrawingPoints mGestureStrokeDrawingPoints;
 
+    // true if user is swiping keyboard to control cursor - last key should not be pressed and poup should not be visible
+    private boolean swipeControlActive = false;
+
     // TODO: Add PointerTrackerFactory singleton and move some class static methods into it.
     public static void init(final TypedArray mainKeyboardViewAttr, final TimerProxy timerProxy,
             final DrawingProxy drawingProxy) {
@@ -387,6 +390,9 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
             return;
         }
 
+        // swipe contrill has ended
+        swipeControlActive = false;
+
         sDrawingProxy.onKeyReleased(key, withAnimation);
 
         if (key.isShift()) {
@@ -418,6 +424,11 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
 
     private void setPressedKeyGraphics(@Nullable final Key key, final long eventTime) {
         if (key == null) {
+            return;
+        }
+
+        //dont show graphics when swipe-controlling
+        if (swipeControlActive == true){
             return;
         }
 
@@ -492,9 +503,28 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
     }
 
     private Key onMoveToNewKey(final Key newKey, final int x, final int y) {
+        // swipe controll
+        if (mCurrentKey != null) {
+            swipeControlActive = true;
+            sInGesture = true;
+            int oldX = mCurrentKey.getX();
+            int newX = newKey.getX();
+            if (!sGestureEnabler.shouldHandleGesture()) {
+                System.out.println("Scrolling");
+                int diff = oldX - newX;
+                if (diff > 0) {
+                    sListener.onCustomRequest(Constants.CUSTOM_CODE_PREV_CHAR);
+                } else {
+                    sListener.onCustomRequest(Constants.CUSTOM_CODE_NEXT_CHAR);
+                }
+            }
+        }
+
+
         mCurrentKey = newKey;
         mKeyX = x;
         mKeyY = y;
+
         return newKey;
     }
 

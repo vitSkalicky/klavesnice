@@ -197,6 +197,15 @@ public final class Constants {
     public static final int CUSTOM_CODE_SHOW_INPUT_METHOD_PICKER = 1;
 
     /**
+     * Used by PointerTracker#onMoveToNewKey for swipe control (swiping on keyboard scrolls text)
+     */
+    public static final int CUSTOM_CODE_PREV_CHAR = 21;
+    /**
+     * Used by PointerTracker#onMoveToNewKey for swipe control (swiping on keyboard scrolls text)
+     */
+    public static final int CUSTOM_CODE_NEXT_CHAR = 22;
+
+    /**
      * Some common keys code. Must be positive.
      */
     public static final int CODE_ENTER = '\n';
