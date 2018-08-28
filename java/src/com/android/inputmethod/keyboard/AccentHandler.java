@@ -17,33 +17,40 @@ public class AccentHandler {
     /**
      * map of non-spacing characters and their spacing variants.
      */
-    private final static Map<Character,Character> combiningToSpacing;
+    private final static Map<Character, Character> combiningToSpacing;
+
     static {
-        Map<Character,Character> m = new HashMap<>();
-        m.put('\u0301','´');
-        m.put('\u030C','ˇ');
+        Map<Character, Character> m = new HashMap<>();
+        m.put('\u0301', '´');
+        m.put('\u030C', 'ˇ');
         combiningToSpacing = Collections.unmodifiableMap(m);
     }
 
     /**
      * gets last pressed key and remembers/adds accent
      */
-     public String handleAccent(char last){
+    public String handleAccent(char last) {
         //if last pressed was an accent key
-        if (Character.getType(last) == Character.NON_SPACING_MARK){
-            if (prevAccent != 0){
+        if (Character.getType(last) == Character.NON_SPACING_MARK) { // if combining character is inputed
+            if (prevAccent != 0) { // if there was one before
                 Character ret = combiningToSpacing.get(last);
                 prevAccent = 0;
                 if (ret == null)
                     return "";
                 return ret.toString();
-            }else {
+            } else { // if it is first on in row
                 prevAccent = last;
                 return "";
             }
-        } else if (prevAccent == 0){
+        } else if (Character.getType(last) == Character.SPACE_SEPARATOR && prevAccent != 0) { // if it is space and there is one accent remembered, we print the accent
+            Character ret = combiningToSpacing.get(prevAccent);
+            prevAccent = 0;
+            if (ret == null)
+                return "";
+            return ret.toString();
+        } else if (prevAccent == 0) { // if there was no accent remembered
             return last + "";
-        } else {
+        } else { // if we input letter and there was an accent remembered, we normalise them together
             String ret = Normalizer.normalize(last + "" + prevAccent, Normalizer.Form.NFC);
             prevAccent = 0;
             return ret;
