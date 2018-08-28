@@ -338,6 +338,9 @@ public final class Constants {
     public static final int EVENT_REJECTION = 2;
     public static final int EVENT_REVERT = 3;
 
+
+    public static final String PREF_SWIPE_CONTROL = "pref_swipe_control";
+
     private Constants() {
         // This utility class is not publicly instantiable.
     }

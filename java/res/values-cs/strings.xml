@@ -197,4 +197,6 @@
     <string name="user_dict_fast_scroll_alphabet" msgid="5431919401558285473">" ABCČDEFGHChIJKLMNOPQRŘSŠTUVWXYZŽ"</string>
     <string name="subtype_diacritic_qwerty">Česká diakritická (QWERTY)</string>
     <string name="subtype_diacritic_qwertz">Česká Diakritická (QWERTZ)</string>
+    <string name="swipe_control">Ovládání tažením</string>
+    <string name="swipe_control_summary">Umožňuje ovládání kurzoru tažením po klávesnici</string>
 </resources>

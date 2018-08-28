@@ -565,4 +565,6 @@ Tip: You can download and remove dictionaries by going to &lt;b>Languages&#160;&
     <string name="user_dict_fast_scroll_alphabet">\u0020ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="subtype_diacritic_qwerty">Czech Diacritic (QWERTY)</string>
     <string name="subtype_diacritic_qwertz">Czech Diacritic (QWERTZ)</string>
+    <string name="swipe_control">Swipe control</string>
+    <string name="swipe_control_summary">Enables cursor control by swiping keyboard</string>
 </resources>

@@ -169,6 +169,8 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
     private final TimerHandler mTimerHandler;
     private final int mLanguageOnSpacebarHorizontalMargin;
 
+    private final SharedPreferences prefs;
+
     private MainKeyboardAccessibilityDelegate mAccessibilityDelegate;
 
     public MainKeyboardView(final Context context, final AttributeSet attrs) {
@@ -197,9 +199,12 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
         mKeyDetector = new KeyDetector(
                 keyHysteresisDistance, keyHysteresisDistanceForSlidingModifier);
 
-        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */);
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        // initing PointerTracker and registering its onSharedPreferencesChangeListener
+        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Constants.PREF_SWIPE_CONTROL,false));
+        prefs.registerOnSharedPreferenceChangeListener(PointerTracker.getSharedPreferenceChangeListener());
+
         final boolean forceNonDistinctMultitouch = prefs.getBoolean(
                 DebugSettings.PREF_FORCE_NON_DISTINCT_MULTITOUCH, false);
         final boolean hasDistinctMultitouch = context.getPackageManager()
