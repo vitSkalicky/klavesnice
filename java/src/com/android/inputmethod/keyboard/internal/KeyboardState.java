@@ -20,6 +20,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.inputmethod.event.Event;
+import com.android.inputmethod.keyboard.AccentHandler;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.utils.CapsModeUtils;
 import com.android.inputmethod.latin.utils.RecapitalizeStatus;
@@ -665,7 +666,7 @@ public final class KeyboardState {
         }
 
         // If the code is a letter, update keyboard shift state.
-        if (Constants.isLetterCode(code)) {
+        if (Constants.isLetterCode(code) && !AccentHandler.isHandlableAccent((char) code)) {
             updateAlphabetShiftState(autoCapsFlags, recapitalizeMode);
         } else if (code == Constants.CODE_EMOJI) {
             setEmojiKeyboard();

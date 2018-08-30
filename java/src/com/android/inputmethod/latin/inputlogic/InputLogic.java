@@ -763,14 +763,23 @@ public final class InputLogic {
      * manage keyboard-related stuff like shift, language switch, settings, layout switch, or
      * any key that results in multiple code points like the ".com" key.
      *
-     * @param event The event to handle.
+     * @param tmpEvent The event to handle.
      * @param inputTransaction The transaction in progress.
      */
-    private void handleNonSpecialCharacterEvent(final Event event,
+    private void handleNonSpecialCharacterEvent(final Event tmpEvent,
             final InputTransaction inputTransaction,
             final LatinIME.UIHandler handler) {
-        final int codePoint = event.mCodePoint;
+        int tmpCodePoint = tmpEvent.mCodePoint;
         mSpaceState = SpaceState.NONE;
+
+        // accent handling
+        String s = mAccrentHandler.handleAccent((char) tmpCodePoint);
+        if (s.length() == 0){
+            return;
+        }
+        final int codePoint = s.codePointAt(0);
+        Event event = Event.createSoftwareKeypressEvent(codePoint,tmpEvent.mKeyCode,tmpEvent.mX,tmpEvent.mY,tmpEvent.isKeyRepeat());
+
         if (inputTransaction.mSettingsValues.isWordSeparator(codePoint)
                 || Character.getType(codePoint) == Character.OTHER_SYMBOL) {
             handleSeparatorEvent(event, inputTransaction, handler);
@@ -2012,15 +2021,7 @@ public final class InputLogic {
             // relying on this behavior so we continue to support it for older apps.
             sendDownUpKeyEvent(KeyEvent.KEYCODE_ENTER);
         } else {
-
-            // solving accent keys problem here
-            String orig = StringUtils.newSingleCodePointString(codePoint);
-            if (orig.length() == 1){
-                String nevv = mAccrentHandler.handleAccent(orig.charAt(0));
-                mConnection.commitText(nevv,1);
-            }else {
-                mConnection.commitText(orig, 1);
-            }
+            mConnection.commitText(StringUtils.newSingleCodePointString(codePoint),1);
 
         }
     }

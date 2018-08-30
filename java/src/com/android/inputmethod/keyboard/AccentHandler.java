@@ -27,6 +27,14 @@ public class AccentHandler {
     }
 
     /**
+     * Returns true if the character is combining accent character that can be handled by {@link AccentHandler}.
+     * @param code code of the character
+     */
+    public static boolean isHandlableAccent(char code){
+        return combiningToSpacing.containsKey(code);
+    }
+
+    /**
      * gets last pressed key and remembers/adds accent
      */
     public String handleAccent(char last) {
