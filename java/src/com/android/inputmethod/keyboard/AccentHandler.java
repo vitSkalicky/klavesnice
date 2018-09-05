@@ -64,4 +64,10 @@ public class AccentHandler {
             return ret;
         }
     }
+
+    public boolean resetAccent(){
+        char lastAccent = prevAccent;
+        prevAccent = 0;
+        return lastAccent != prevAccent;
+    }
 }

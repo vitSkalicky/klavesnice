@@ -215,6 +215,7 @@ public final class InputLogic {
         }
         resetComposingState(true /* alsoResetLastComposedWord */);
         mInputLogicHandler.reset();
+        mAccrentHandler.resetAccent();
     }
 
     // Normally this class just gets out of scope after the process ends, but in unit tests, we
@@ -1005,8 +1006,12 @@ public final class InputLogic {
      */
     private void handleBackspaceEvent(final Event event, final InputTransaction inputTransaction,
             final int currentKeyboardScriptId) {
+        if (mAccrentHandler.resetAccent()){
+            return;
+        }
         mSpaceState = SpaceState.NONE;
         mDeleteCount++;
+
 
         // In many cases after backspace, we need to update the shift state. Normally we need
         // to do this right away to avoid the shift state being out of date in case the user types
