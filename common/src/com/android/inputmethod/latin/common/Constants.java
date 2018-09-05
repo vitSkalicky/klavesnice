@@ -231,6 +231,8 @@ public final class Constants {
     public static final int CODE_GRAVE_ACCENT = '`';
     public static final int CODE_CIRCUMFLEX_ACCENT = '^';
     public static final int CODE_TILDE = '~';
+    public static final int CODE_COMBINING_ACUTE = '\u0301'; // ´ (combining variant)
+    public static final int CODE_COMBINING_CARON = '\u030C'; // ˇ (combining variant)
 
     public static final String REGEXP_PERIOD = "\\.";
     public static final String STRING_SPACE = " ";
@@ -254,6 +256,7 @@ public final class Constants {
     public static final int CODE_SHIFT_ENTER = -12;
     public static final int CODE_SYMBOL_SHIFT = -13;
     public static final int CODE_ALPHA_FROM_EMOJI = -14;
+
     // Code value representing the code is not specified.
     public static final int CODE_UNSPECIFIED = -15;
 
