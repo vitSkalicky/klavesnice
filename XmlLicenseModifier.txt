@@ -1,0 +1,12 @@
+for filename in $1/*; do
+    if [ -d "$filename" ] ; then
+        $0 $filename;
+    else
+        if [[ $filename == *.xml ]] ; then
+          if grep -q res-auto "$filename"; then
+            sed -i '18s/.*/**\n** Modified by Vít Skalický 2018 \n*\//' $filename
+            echo $filename
+          fi
+        fi
+    fi
+done
