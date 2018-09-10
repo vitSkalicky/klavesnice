@@ -44,4 +44,8 @@
         android:fragment="com.android.inputmethod.latin.settings.AdvancedSettingsFragment"
         android:title="@string/settings_screen_advanced"
         android:key="screen_advanced" />
+    <PreferenceScreen
+        android:fragment="com.android.inputmethod.latin.settings.AboutFragment"
+        android:title="@string/settings_screen_about"
+        android:key="screen_about" />
 </PreferenceScreen>

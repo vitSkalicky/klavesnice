@@ -201,4 +201,9 @@
     <string name="subtype_diacritic_qwertz">Czech Diacritic (QWERTZ)</string>
     <string name="swipe_control">Swipe control</string>
     <string name="swipe_control_summary">Enables cursor control by swiping keyboard</string>
+    <string name="settings_screen_about">About this keyboard</string>
+    <string name="icon">Icon</string>
+    <string name="important_notice_suggest_contact_names">Suggest contact names? Touch for info.</string>
+    <string name="show_license">Show license</string>
+    <string name="license">Licesnse</string>
 </resources>

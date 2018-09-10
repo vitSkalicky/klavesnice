@@ -122,6 +122,14 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".settings.LicenseActivity"
+            android:theme="@style/platformSettingsTheme"
+            android:label="@string/english_ime_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".spellcheck.SpellCheckerSettingsActivity"
                   android:theme="@style/platformSettingsTheme"
                   android:label="@string/android_spell_checker_settings">

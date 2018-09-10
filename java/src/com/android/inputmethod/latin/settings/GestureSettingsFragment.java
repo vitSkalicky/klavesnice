@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified by Vít Skalický, 2018
  */
 
 package com.android.inputmethod.latin.settings;
@@ -21,13 +23,10 @@ import android.os.Bundle;
 import com.android.inputmethod.latin.R;
 
 /**
- * "Gesture typing preferences" settings sub screen.
+ * "Gestures" settings sub screen.
  *
  * This settings sub screen handles the following gesture typing preferences.
- * - Enable gesture typing
- * - Dynamic floating preview
- * - Show gesture trail
- * - Phrase gesture
+ * - Enable Swipe controll
  */
 public final class GestureSettingsFragment extends SubScreenFragment {
     @Override

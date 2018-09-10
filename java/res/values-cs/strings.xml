@@ -201,4 +201,9 @@
     <string name="subtype_diacritic_qwertz">Česká Diakritická (QWERTZ)</string>
     <string name="swipe_control">Ovládání tažením</string>
     <string name="swipe_control_summary">Umožňuje ovládání kurzoru tažením po klávesnici</string>
+    <string name="settings_screen_about">Informace o této klávesnici</string>
+    <string name="icon">Ikona</string>
+    <string name="important_notice_suggest_contact_names">Chcete navrhovat jména konkatktů? Ťukněte sem.</string>
+    <string name="show_license">Zobrazit licensi</string>
+    <string name="license">Licence</string>
 </resources>
