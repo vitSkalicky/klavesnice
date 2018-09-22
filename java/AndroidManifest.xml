@@ -51,7 +51,7 @@
                  .setPackage("com.android.inputmethod.latin"));
          }
          </pre> -->
-    <permission android:name="com.android.inputmethod.latin.HIDE_SOFT_INPUT"
+    <permission android:name="cz.vitSkalicky.klavesnice.latin.HIDE_SOFT_INPUT"
                 android:protectionLevel="signature" />
 
     <application android:label="@string/english_ime_name"
