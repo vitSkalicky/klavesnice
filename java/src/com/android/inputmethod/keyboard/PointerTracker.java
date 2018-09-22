@@ -528,7 +528,7 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
 
     private Key onMoveToNewKey(final Key newKey, final int x, final int y) {
         // swipe controll
-        if (mCurrentKey != null && mCurrentKey.getX() != newKey.getX() && sIsSwipeControlEnabled) {
+        if (mCurrentKey != null && newKey != null && mCurrentKey.getX() != newKey.getX() && sIsSwipeControlEnabled) {
             isSwipeControlActive = true;
             sInGesture = true;
             int oldX = mCurrentKey.getX();
