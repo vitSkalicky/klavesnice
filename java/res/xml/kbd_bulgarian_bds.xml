@@ -15,11 +15,13 @@
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
+**
+** Modified by Vít Skalický 2018 
 */
 -->
 
 <Keyboard
-    xmlns:latin="http://schemas.android.com/apk/res/com.android.inputmethod.latin"
+    xmlns:latin="http://schemas.android.com/apk/res-auto"
 >
     <include
         latin:keyboardLayout="@xml/rows_bulgarian_bds" />
