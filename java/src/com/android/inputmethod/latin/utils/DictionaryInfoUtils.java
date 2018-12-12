@@ -28,6 +28,7 @@ import com.android.inputmethod.annotations.UsedForTesting;
 import com.android.inputmethod.dictionarypack.UpdateHandler;
 import com.android.inputmethod.latin.AssetFileAddress;
 import com.android.inputmethod.latin.BinaryDictionaryGetter;
+import com.android.inputmethod.latin.BuildConfig;
 import com.android.inputmethod.latin.R;
 import com.android.inputmethod.latin.RichInputMethodManager;
 import com.android.inputmethod.latin.common.FileUtils;
@@ -54,7 +55,7 @@ import javax.annotation.Nullable;
  */
 public class DictionaryInfoUtils {
     private static final String TAG = DictionaryInfoUtils.class.getSimpleName();
-    public static final String RESOURCE_PACKAGE_NAME = R.class.getPackage().getName();
+    public static final String RESOURCE_PACKAGE_NAME = BuildConfig.APPLICATION_ID;
     private static final String DEFAULT_MAIN_DICT = "main";
     private static final String MAIN_DICT_PREFIX = "main_";
     private static final String DECODER_DICT_SUFFIX = DecoderSpecificConstants.DECODER_DICT_SUFFIX;
