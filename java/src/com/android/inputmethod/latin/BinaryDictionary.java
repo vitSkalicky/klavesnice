@@ -221,7 +221,7 @@ public final class BinaryDictionary extends Dictionary {
     private void loadDictionary(final String path, final long startOffset,
             final long length, final boolean isUpdatable) {
         mHasUpdated = false;
-        mNativeDict = openNative(path, startOffset, length, isUpdatable);
+        mNativeDict = openNative(path, startOffset, length, isUpdatable); //tady
     }
 
     // TODO: Check isCorrupted() for main dictionaries.

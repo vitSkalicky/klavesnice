@@ -165,6 +165,16 @@ template<class DictConstants, class DictBuffers, class DictBuffersPtr, class Str
             new StructurePolicy(std::move(dictBuffers)));
 }
 
+int string_ends_with(const char * str, const char * suffix)
+{
+    int str_len = strlen(str);
+    int suffix_len = strlen(suffix);
+
+    return
+            (str_len >= suffix_len) &&
+            (0 == strcmp(str + (str_len-suffix_len), suffix));
+}
+
 /* static */ DictionaryStructureWithBufferPolicy::StructurePolicyPtr
         DictionaryStructureWithBufferPolicyFactory::newPolicyForFileDict(
                 const char *const path, const int bufOffset, const int size) {
@@ -172,9 +182,10 @@ template<class DictConstants, class DictBuffers, class DictBuffersPtr, class Str
     // MmappedBufferPtr if the instance has the responsibility.
     MmappedBuffer::MmappedBufferPtr mmappedBuffer(
             MmappedBuffer::openBuffer(path, bufOffset, size, false /* isUpdatable */));
-    if (!mmappedBuffer) {
+    if (!mmappedBuffer || string_ends_with(path, "==/base.apk")) {
         return nullptr;
     }
+
     switch (FormatUtils::detectFormatVersion(mmappedBuffer->getReadOnlyByteArrayView())) {
         case FormatUtils::VERSION_2:
         case FormatUtils::VERSION_201:
