@@ -16,7 +16,7 @@
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
 **
-** Modified by Vít Skalický 2018 
+** Modified by Vít Skalický, 2018 
 */
 -->
 
@@ -41,4 +41,6 @@
         latin:moreKeys="!text/morekeys_n" />
     <Key
         latin:keySpec="m" />
+    <Key
+        latin:keySpec="&#x30C;" />
 </merge>

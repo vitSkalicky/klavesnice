@@ -16,7 +16,7 @@
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
 **
-** Modified by Vít Skalický 2018 
+** Modified by Vít Skalický, 2018 
 */
 -->
 
@@ -35,4 +35,8 @@
     <Key
         latin:keySpec="l"
         latin:moreKeys="!text/morekeys_l" />
+    <Key
+        latin:keySpec="&#x301;"
+        latin:altCode="&#x301;"
+        latin:moreKeys="" />
 </merge>
