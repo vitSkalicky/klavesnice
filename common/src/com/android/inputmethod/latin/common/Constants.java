@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified by Vít Skalický, 2018
  */
 
 package com.android.inputmethod.latin.common;
@@ -222,6 +224,8 @@ public final class Constants {
     public static final int CODE_GRAVE_ACCENT = '`';
     public static final int CODE_CIRCUMFLEX_ACCENT = '^';
     public static final int CODE_TILDE = '~';
+    public static final int CODE_COMBINING_ACUTE = '\u0301'; // ´ (combining variant)
+    public static final int CODE_COMBINING_CARON = '\u030C'; // ˇ (combining variant)
 
     public static final String REGEXP_PERIOD = "\\.";
     public static final String STRING_SPACE = " ";

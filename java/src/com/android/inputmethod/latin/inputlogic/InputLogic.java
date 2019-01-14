@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified by Vít Skalický, 2018
  */
 
 package com.android.inputmethod.latin.inputlogic;
@@ -32,6 +34,7 @@ import android.view.inputmethod.EditorInfo;
 import com.android.inputmethod.compat.SuggestionSpanUtils;
 import com.android.inputmethod.event.Event;
 import com.android.inputmethod.event.InputTransaction;
+import com.android.inputmethod.keyboard.AccentHandler;
 import com.android.inputmethod.keyboard.Keyboard;
 import com.android.inputmethod.keyboard.KeyboardSwitcher;
 import com.android.inputmethod.latin.Dictionary;
@@ -108,6 +111,12 @@ public final class InputLogic {
     // The word being corrected while the cursor is in the middle of the word.
     // Note: This does not have a composing span, so it must be handled separately.
     private String mWordBeingCorrectedByCursor = null;
+
+    /**
+     * Accent handler for better accent keys support. {@link #sendKeyCodePoint(SettingsValues, int)}
+      */
+
+    private AccentHandler mAccrentHandler = new AccentHandler();
 
     /**
      * Create a new instance of the input logic.
@@ -208,6 +217,7 @@ public final class InputLogic {
         }
         resetComposingState(true /* alsoResetLastComposedWord */);
         mInputLogicHandler.reset();
+        mAccrentHandler.resetAccent();
     }
 
     // Normally this class just gets out of scope after the process ends, but in unit tests, we
@@ -756,14 +766,23 @@ public final class InputLogic {
      * manage keyboard-related stuff like shift, language switch, settings, layout switch, or
      * any key that results in multiple code points like the ".com" key.
      *
-     * @param event The event to handle.
+     * @param tmpEvent The event to handle.
      * @param inputTransaction The transaction in progress.
      */
-    private void handleNonSpecialCharacterEvent(final Event event,
+    private void handleNonSpecialCharacterEvent(final Event tmpEvent,
             final InputTransaction inputTransaction,
             final LatinIME.UIHandler handler) {
-        final int codePoint = event.mCodePoint;
+        int tmpCodePoint = tmpEvent.mCodePoint;
         mSpaceState = SpaceState.NONE;
+
+        // accent handling
+        String s = mAccrentHandler.handleAccent((char) tmpCodePoint);
+        if (s.length() == 0){
+            return;
+        }
+        final int codePoint = s.codePointAt(0);
+        Event event = Event.createSoftwareKeypressEvent(codePoint,tmpEvent.mKeyCode,tmpEvent.mX,tmpEvent.mY,tmpEvent.isKeyRepeat());
+
         if (inputTransaction.mSettingsValues.isWordSeparator(codePoint)
                 || Character.getType(codePoint) == Character.OTHER_SYMBOL) {
             handleSeparatorEvent(event, inputTransaction, handler);
@@ -989,6 +1008,9 @@ public final class InputLogic {
      */
     private void handleBackspaceEvent(final Event event, final InputTransaction inputTransaction,
             final int currentKeyboardScriptId) {
+        if (mAccrentHandler.resetAccent()){
+            return;
+        }
         mSpaceState = SpaceState.NONE;
         mDeleteCount++;
 
@@ -1992,10 +2014,10 @@ public final class InputLogic {
     private void sendKeyCodePoint(final SettingsValues settingsValues, final int codePoint) {
         // TODO: Remove this special handling of digit letters.
         // For backward compatibility. See {@link InputMethodService#sendKeyChar(char)}.
-        if (codePoint >= '0' && codePoint <= '9') {
+        /*if (codePoint >= '0' && codePoint <= '9') {
             sendDownUpKeyEvent(codePoint - '0' + KeyEvent.KEYCODE_0);
             return;
-        }
+        }*/
 
         // TODO: we should do this also when the editor has TYPE_NULL
         if (Constants.CODE_ENTER == codePoint && settingsValues.isBeforeJellyBean()) {
