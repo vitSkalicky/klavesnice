@@ -37,4 +37,10 @@
         android:title="@string/gesture_preview_trail"
         android:defaultValue="true"
         android:persistent="true" />
+    <CheckBoxPreference
+        android:key="pref_swipe_control"
+        android:title="@string/swipe_control"
+        android:summary="@string/swipe_control_description"
+        android:defaultValue="false"
+        android:persistent="true"/>
 </PreferenceScreen>
