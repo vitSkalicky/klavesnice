@@ -199,6 +199,15 @@ public final class Constants {
     public static final int CUSTOM_CODE_SHOW_INPUT_METHOD_PICKER = 1;
 
     /**
+     * Used by PointerTracker#onMoveToNewKey for swipe control (swiping on keyboard scrolls text)
+     */
+    public static final int CUSTOM_CODE_PREV_CHAR = 21;
+    /**
+     * Used by PointerTracker#onMoveToNewKey for swipe control (swiping on keyboard scrolls text)
+     */
+    public static final int CUSTOM_CODE_NEXT_CHAR = 22;
+
+    /**
      * Some common keys code. Must be positive.
      */
     public static final int CODE_ENTER = '\n';
@@ -249,6 +258,7 @@ public final class Constants {
     public static final int CODE_SHIFT_ENTER = -12;
     public static final int CODE_SYMBOL_SHIFT = -13;
     public static final int CODE_ALPHA_FROM_EMOJI = -14;
+
     // Code value representing the code is not specified.
     public static final int CODE_UNSPECIFIED = -15;
 
@@ -332,6 +342,9 @@ public final class Constants {
     public static final int EVENT_BACKSPACE = 1;
     public static final int EVENT_REJECTION = 2;
     public static final int EVENT_REVERT = 3;
+
+
+    public static final String PREF_SWIPE_CONTROL = "pref_swipe_control";
 
     private Constants() {
         // This utility class is not publicly instantiable.

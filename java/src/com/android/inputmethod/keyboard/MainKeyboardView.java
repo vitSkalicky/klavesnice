@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified by Vít Skalický, 2018
  */
 
 package com.android.inputmethod.keyboard;
@@ -169,6 +171,8 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
     private final TimerHandler mTimerHandler;
     private final int mLanguageOnSpacebarHorizontalMargin;
 
+    private final SharedPreferences prefs;
+
     private MainKeyboardAccessibilityDelegate mAccessibilityDelegate;
 
     public MainKeyboardView(final Context context, final AttributeSet attrs) {
@@ -197,9 +201,12 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
         mKeyDetector = new KeyDetector(
                 keyHysteresisDistance, keyHysteresisDistanceForSlidingModifier);
 
-        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */);
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        // initing PointerTracker and registering its onSharedPreferencesChangeListener
+        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Constants.PREF_SWIPE_CONTROL,false));
+        prefs.registerOnSharedPreferenceChangeListener(PointerTracker.getSharedPreferenceChangeListener());
+
         final boolean forceNonDistinctMultitouch = prefs.getBoolean(
                 DebugSettings.PREF_FORCE_NON_DISTINCT_MULTITOUCH, false);
         final boolean hasDistinctMultitouch = context.getPackageManager()

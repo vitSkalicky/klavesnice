@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Modified by Vít Skalický, 2018
  */
 
 package com.android.inputmethod.latin;
@@ -1355,6 +1357,12 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
                 return true;
             }
             return false;
+        case Constants.CUSTOM_CODE_PREV_CHAR: // used by swipe control
+            sendDownUpKeyEvents(21); //goes one char back
+            break;
+        case Constants.CUSTOM_CODE_NEXT_CHAR:
+                sendDownUpKeyEvents(22); //goes one char forward
+
         }
         return false;
     }
