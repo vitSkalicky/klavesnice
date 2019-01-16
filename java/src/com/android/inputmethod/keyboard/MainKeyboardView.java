@@ -59,6 +59,7 @@ import com.android.inputmethod.latin.SuggestedWords;
 import com.android.inputmethod.latin.common.Constants;
 import com.android.inputmethod.latin.common.CoordinateUtils;
 import com.android.inputmethod.latin.settings.DebugSettings;
+import com.android.inputmethod.latin.settings.Settings;
 import com.android.inputmethod.latin.utils.LanguageOnSpacebarUtils;
 import com.android.inputmethod.latin.utils.TypefaceUtils;
 
@@ -204,7 +205,7 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         // initing PointerTracker and registering its onSharedPreferencesChangeListener
-        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Constants.PREF_SWIPE_CONTROL,false));
+        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Settings.PREF_SWIPE_CONTROL,false));
         prefs.registerOnSharedPreferenceChangeListener(PointerTracker.getSharedPreferenceChangeListener());
 
         final boolean forceNonDistinctMultitouch = prefs.getBoolean(

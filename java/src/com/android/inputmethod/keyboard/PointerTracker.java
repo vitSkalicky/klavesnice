@@ -163,8 +163,8 @@ public final class PointerTracker implements PointerTrackerQueue.Element,
     private final static SharedPreferences.OnSharedPreferenceChangeListener sharedPreferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
         @Override
         public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if (key.equals(Constants.PREF_SWIPE_CONTROL)) {
-                sIsSwipeControlEnabled = sharedPreferences.getBoolean(Constants.PREF_SWIPE_CONTROL, false);
+            if (key.equals(Settings.PREF_SWIPE_CONTROL)) {
+                sIsSwipeControlEnabled = sharedPreferences.getBoolean(Settings.PREF_SWIPE_CONTROL, false);
             }
         }
     };
