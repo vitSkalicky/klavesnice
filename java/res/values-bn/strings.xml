@@ -15,6 +15,8 @@
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
+**
+** Modified by Vít Skalický, 2019 
 */
  -->
 
@@ -141,7 +143,6 @@
     <string name="prefs_enable_emoji_alt_physical_key_summary" msgid="5259484820941627827">"ফিজিক্যাল Alt কী ইমোজি প্যালেট দেখায়"</string>
     <string name="button_default" msgid="3988017840431881491">"ডিফল্ট"</string>
     <string name="setup_welcome_title" msgid="6112821709832031715">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> এ স্বাগতম"</string>
-    <string name="setup_welcome_additional_description" msgid="8150252008545768953">"ইঙ্গিত টাইপিং এর মাধ্যমে"</string>
     <string name="setup_start_action" msgid="8936036460897347708">"শুরু করা যাক"</string>
     <string name="setup_next_action" msgid="371821437915144603">"পরবর্তী পদক্ষেপ"</string>
     <string name="setup_steps_title" msgid="6400373034871816182">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> সেট আপ হচ্ছে"</string>

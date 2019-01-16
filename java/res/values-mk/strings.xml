@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
 /*
 **
 ** Copyright 2008, The Android Open Source Project
@@ -15,6 +15,8 @@
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
+**
+** Modified by Vít Skalický, 2019
 */
  -->
 
@@ -144,7 +146,6 @@
     <string name="setup_welcome_additional_description" msgid="8150252008545768953">"со Пишување со движење"</string>
     <string name="setup_start_action" msgid="8936036460897347708">"Започнете"</string>
     <string name="setup_next_action" msgid="371821437915144603">"Следен чекор"</string>
-    <string name="setup_steps_title" msgid="6400373034871816182">"Се поставува <xliff:g id="APPLICATION_NAME">%s</xliff:g>"</string>
     <string name="setup_step1_title" msgid="3147967630253462315">"Овозможи <xliff:g id="APPLICATION_NAME">%s</xliff:g>"</string>
     <string name="setup_step1_instruction" msgid="4295448056733329661">"Означете ја апликацијата „<xliff:g id="APPLICATION_NAME">%s</xliff:g>“ во поставките за Јазици и внесување. Со тоа ќе авторизирате да се активира на уредот."</string>
     <string name="setup_step1_finished_instruction" msgid="8701441895377434947">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> веќе е овозможена во поставките за Jазици и внесување, така што завршивте со овој чекор. Одете на следниот."</string>

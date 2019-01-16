@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
 /*
 **
 ** Copyright 2008, The Android Open Source Project
@@ -15,6 +15,8 @@
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
+**
+** Modified by Vít Skalický, 2019 
 */
  -->
 
@@ -141,7 +143,6 @@
     <string name="prefs_enable_emoji_alt_physical_key_summary" msgid="5259484820941627827">"പ്രത്യക്ഷ Alt കീ ഇമോജി പാലറ്റിനെ കാണിക്കുന്നു"</string>
     <string name="button_default" msgid="3988017840431881491">"സ്ഥിരമായത്"</string>
     <string name="setup_welcome_title" msgid="6112821709832031715">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> എന്നതിലേക്ക് സ്വാഗതം"</string>
-    <string name="setup_welcome_additional_description" msgid="8150252008545768953">"വിരൽചലിത ടൈപ്പിംഗിനൊപ്പം"</string>
     <string name="setup_start_action" msgid="8936036460897347708">"ആരംഭിക്കുക"</string>
     <string name="setup_next_action" msgid="371821437915144603">"അടുത്ത ചുവട്"</string>
     <string name="setup_steps_title" msgid="6400373034871816182">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> സജ്ജമാക്കുന്നു"</string>

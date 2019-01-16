@@ -15,6 +15,8 @@
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
+**
+** Modified by Vít Skalický, 2019 
 */
  -->
 
@@ -141,7 +143,6 @@
     <string name="prefs_enable_emoji_alt_physical_key_summary" msgid="5259484820941627827">"භෞතික Alt යතුර ඉමොජි පෙන්වයි"</string>
     <string name="button_default" msgid="3988017840431881491">"සුපුරුදු"</string>
     <string name="setup_welcome_title" msgid="6112821709832031715">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> වෙත සාදරයෙන් පිළිගනිමු"</string>
-    <string name="setup_welcome_additional_description" msgid="8150252008545768953">"ඉංගිත ටයිප් කිරීම් සමග"</string>
     <string name="setup_start_action" msgid="8936036460897347708">"අරඹන්න"</string>
     <string name="setup_next_action" msgid="371821437915144603">"ඊළඟ පියවර"</string>
     <string name="setup_steps_title" msgid="6400373034871816182">"<xliff:g id="APPLICATION_NAME">%s</xliff:g> සැකසෙමින් පවතී"</string>
