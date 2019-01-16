@@ -76,8 +76,8 @@ public final class ImportantNoticeUtils {
 
     @UsedForTesting
     static boolean hasContactsNoticeShown(final Context context) {
-        return getImportantNoticePreferences(context).getBoolean(
-                KEY_SUGGEST_CONTACTS_NOTICE, false);
+        return true;/*getImportantNoticePreferences(context).getBoolean(
+                KEY_SUGGEST_CONTACTS_NOTICE, false);*/
     }
 
     public static boolean shouldShowImportantNotice(final Context context,

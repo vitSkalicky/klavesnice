@@ -205,7 +205,7 @@ public final class MainKeyboardView extends KeyboardView implements DrawingProxy
         prefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         // initing PointerTracker and registering its onSharedPreferencesChangeListener
-        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Settings.PREF_SWIPE_CONTROL,false));
+        PointerTracker.init(mainKeyboardViewAttr, mTimerHandler, this /* DrawingProxy */,prefs.getBoolean(Settings.PREF_SWIPE_CONTROL,true/*default value*/));
         prefs.registerOnSharedPreferenceChangeListener(PointerTracker.getSharedPreferenceChangeListener());
 
         final boolean forceNonDistinctMultitouch = prefs.getBoolean(

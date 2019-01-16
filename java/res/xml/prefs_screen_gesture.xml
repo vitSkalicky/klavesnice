@@ -19,28 +19,9 @@
     android:title="@string/settings_screen_gesture"
     android:key="screen_gesture">
     <CheckBoxPreference
-        android:key="gesture_input"
-        android:title="@string/gesture_input"
-        android:summary="@string/gesture_input_summary"
-        android:defaultValue="true"
-        android:persistent="true" />
-    <CheckBoxPreference
-        android:key="pref_gesture_floating_preview_text"
-        android:dependency="gesture_input"
-        android:title="@string/gesture_floating_preview_text"
-        android:summary="@string/gesture_floating_preview_text_summary"
-        android:defaultValue="true"
-        android:persistent="true" />
-    <CheckBoxPreference
-        android:key="pref_gesture_preview_trail"
-        android:dependency="gesture_input"
-        android:title="@string/gesture_preview_trail"
-        android:defaultValue="true"
-        android:persistent="true" />
-    <CheckBoxPreference
         android:key="pref_swipe_control"
         android:title="@string/swipe_control"
         android:summary="@string/swipe_control_description"
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:persistent="true"/>
 </PreferenceScreen>
