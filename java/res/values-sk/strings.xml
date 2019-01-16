@@ -29,7 +29,7 @@
     <string name="settings_screen_preferences" msgid="2696713156722014624">"Predvoľby"</string>
     <string name="settings_screen_accounts" msgid="2786418968536696670">"Účty a ochrana osobných údajov"</string>
     <string name="settings_screen_appearance" msgid="7358046399111611615">"Vzhľad a rozloženie"</string>
-    <string name="settings_screen_gesture" msgid="8826372746901183556">"Písanie gestami"</string>
+    <string name="settings_screen_gesture" msgid="8826372746901183556">"Gestá"</string>
     <string name="settings_screen_correction" msgid="1616818407747682955">"Oprava textu"</string>
     <string name="settings_screen_advanced" msgid="7472408607625972994">"Rozšírené"</string>
     <string name="settings_screen_theme" msgid="2137262503543943871">"Motív"</string>
@@ -209,4 +209,6 @@
     <string name="user_dict_settings_more_languages" msgid="7131268499685180461">"Ďalšie jazyky…"</string>
     <string name="user_dict_settings_delete" msgid="110413335187193859">"Odstrániť"</string>
     <string name="user_dict_fast_scroll_alphabet" msgid="5431919401558285473">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
+    <string name="swipe_control">Ovládanie ťahaním</string>
+    <string name="swipe_control_description">Horizontálnym ťahaním po klávesnici posúvate kurzor</string>
 </resources>
