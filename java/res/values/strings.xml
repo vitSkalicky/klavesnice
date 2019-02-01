@@ -581,4 +581,5 @@ Tip: You can download and remove dictionaries by going to &lt;b>Languages&#160;&
     <string name="user_dict_fast_scroll_alphabet">\u0020ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
     <string name="swipe_control">Swipe control</string>
     <string name="swipe_control_description">Move cursor by swiping horizontally across the keyboard</string>
+    <string name="settings_screen_license">License</string>
 </resources>

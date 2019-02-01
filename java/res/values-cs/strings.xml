@@ -213,4 +213,5 @@
     <string name="user_dict_fast_scroll_alphabet" msgid="5431919401558285473">" ABCČDEFGHChIJKLMNOPQRŘSŠTUVWXYZŽ"</string>
     <string name="swipe_control">Ovládání tažením</string>
     <string name="swipe_control_description">Vodorovným tažením po klávesnici posouváte kurzor</string>
+    <string name="settings_screen_license">Licence</string>
 </resources>

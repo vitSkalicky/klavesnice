@@ -40,4 +40,8 @@
         android:fragment="com.android.inputmethod.latin.settings.AdvancedSettingsFragment"
         android:title="@string/settings_screen_advanced"
         android:key="screen_advanced" />
+    <PreferenceScreen
+        android:fragment="com.android.inputmethod.latin.settings.LicenseFragment"
+        android:title="@string/settings_screen_license"
+        android:key="screen_licence" />
 </PreferenceScreen>

@@ -213,4 +213,5 @@
     <string name="user_dict_fast_scroll_alphabet" msgid="5431919401558285473">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
     <string name="swipe_control">Ovládanie ťahaním</string>
     <string name="swipe_control_description">Horizontálnym ťahaním po klávesnici posúvate kurzor</string>
+    <string name="settings_screen_license">Licencia</string>
 </resources>
