@@ -1,3 +1,0 @@
-[submodule "inputmethodcommon"]
-	path = inputmethodcommon
-	url = https://android.googlesource.com/platform/frameworks/opt/inputmethodcommon

@@ -1,1 +1,0 @@
-# Host unit tests don't work with ndk, so they were removed
