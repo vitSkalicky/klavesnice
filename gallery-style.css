@@ -1,0 +1,43 @@
+#left-arrow-box {height: 100%; width: 40%; opacity: 1;}
+#right-arrow-box {height: 100%; width: 40%; right: 0; float: right;opacity: 1;}
+#close-a {opacity: 1;}
+#right-arrow-box img {right: 0;}
+.arrows-container {position: fixed; height: 100%; width: 100%}
+.arrow {height: 2cm; margin: 1em;position: absolute ; top:50%; margin-top: -1cm; color: #ffffff;transition: 0.3s; fill: #ffffff; background-color: rgba(0,0,0,0.5); border-radius: 100%}
+.arrow-box:hover img{background-color: rgba(0,0,0,0.8);}
+#right-arrow-box:active img { right: -1em;}
+#left-arrow-box:active img { margin-left: 0em;}
+.close {height: 1cm; margin: 1em;position: absolute ; color: #ffffff;transition: 0.3s; fill: #ffffff; background-color: rgba(0,0,0,0.5); border-radius: 100%}
+.close:hover {background-color: rgba(0,0,0,0.8);}
+.loader {display:none}
+
+* {margin: 0; padding: 0;}
+.img-box {display: grid; height: 100%;}
+#main-img {max-width: 100%; max-height: 100vh; margin: auto; transition: opacity 0.3s;}
+
+/*@media (hover: none) {
+    .arrow-box:hover img { background-color: rgba(0,0,0,0.5); }
+}*/
+
+/*          NACITAK
+*/
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2cm;
+    height: 2cm;
+    margin-top: -1cm;
+    margin-left: -1cm;
+    border-radius: 50%;
+    border-top: 2px solid #689f38;
+    border-right: 2px solid transparent;
+    animation: spinner 1s linear infinite;
+  }
