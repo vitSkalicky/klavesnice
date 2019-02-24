@@ -26,7 +26,6 @@ import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import javax.annotation.Nonnull;
 
 /**
  * Decodes binary files for a FusionDictionary.
@@ -371,8 +370,7 @@ public final class BinaryDictDecoderUtils {
      * @param headerBuffer a buffer containing the bytes of the header.
      * @return a hashmap of the attributes stored in the header
      */
-    @Nonnull
-    public static HashMap<String, String> decodeHeaderAttributes(@Nonnull final byte[] headerBuffer)
+        public static HashMap<String, String> decodeHeaderAttributes(final byte[] headerBuffer)
             throws UnsupportedFormatException {
         final StringBuilder sb = new StringBuilder();
         final LinkedList<String> keyValues = new LinkedList<>();

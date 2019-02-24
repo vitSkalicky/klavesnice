@@ -33,8 +33,6 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public final class SuggestionSpanUtils {
     // Note that SuggestionSpan.FLAG_AUTO_CORRECTION has been introduced
@@ -58,7 +56,7 @@ public final class SuggestionSpanUtils {
 
     @UsedForTesting
     public static CharSequence getTextWithAutoCorrectionIndicatorUnderline(
-            final Context context, final String text, @Nonnull final Locale locale) {
+            final Context context, final String text, final Locale locale) {
         if (TextUtils.isEmpty(text) || OBJ_FLAG_AUTO_CORRECTION == null) {
             return text;
         }
@@ -106,8 +104,7 @@ public final class SuggestionSpanUtils {
      * found.
      */
     @UsedForTesting
-    @Nullable
-    public static Locale findFirstLocaleFromSuggestionSpans(
+        public static Locale findFirstLocaleFromSuggestionSpans(
             final SuggestionSpan[] suggestionSpans) {
         for (final SuggestionSpan suggestionSpan : suggestionSpans) {
             final String localeString = suggestionSpan.getLocale();

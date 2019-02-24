@@ -20,12 +20,10 @@ import com.android.inputmethod.annotations.UsedForTesting;
 
 import java.util.Arrays;
 
-import javax.annotation.Nonnull;
 
 // TODO: This class is not thread-safe.
 public final class ResizableIntArray {
-    @Nonnull
-    private int[] mArray;
+        private int[] mArray;
     private int mLength;
 
     public ResizableIntArray(final int capacity) {
@@ -94,18 +92,17 @@ public final class ResizableIntArray {
         mLength = 0;
     }
 
-    @Nonnull
-    public int[] getPrimitiveArray() {
+        public int[] getPrimitiveArray() {
         return mArray;
     }
 
-    public void set(@Nonnull final ResizableIntArray ip) {
+    public void set(final ResizableIntArray ip) {
         // TODO: Implement primitive array pool.
         mArray = ip.mArray;
         mLength = ip.mLength;
     }
 
-    public void copy(@Nonnull final ResizableIntArray ip) {
+    public void copy(final ResizableIntArray ip) {
         final int newCapacity = calculateCapacity(ip.mLength);
         if (newCapacity > 0) {
             // TODO: Implement primitive array pool.
@@ -115,7 +112,7 @@ public final class ResizableIntArray {
         mLength = ip.mLength;
     }
 
-    public void append(@Nonnull final ResizableIntArray src, final int startPos, final int length) {
+    public void append(final ResizableIntArray src, final int startPos, final int length) {
         if (length == 0) {
             return;
         }

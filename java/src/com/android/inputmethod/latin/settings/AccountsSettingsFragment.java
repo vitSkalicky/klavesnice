@@ -46,7 +46,6 @@ import com.android.inputmethod.latin.utils.ManagedProfileUtils;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import javax.annotation.Nullable;
 
 /**
  * "Accounts & Privacy" settings sub screen.
@@ -325,8 +324,7 @@ public final class AccountsSettingsFragment extends SubScreenFragment {
         }
     }
 
-    @Nullable
-    String getSignedInAccountName() {
+        String getSignedInAccountName() {
         return getSharedPreferences().getString(LocalSettingsConstants.PREF_ACCOUNT_NAME, null);
     }
 

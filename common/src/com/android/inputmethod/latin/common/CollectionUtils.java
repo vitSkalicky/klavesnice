@@ -22,8 +22,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Utility methods for working with collections.
@@ -40,8 +38,7 @@ public final class CollectionUtils {
      * @param end Last index exclusive to be converted.
      * @throws IllegalArgumentException if start or end are out of range or start &gt; end.
      */
-    @Nonnull
-    public static <E> ArrayList<E> arrayAsList(@Nonnull final E[] array, final int start,
+        public static <E> ArrayList<E> arrayAsList(final E[] array, final int start,
             final int end) {
         if (start < 0 || start > end || end > array.length) {
             throw new IllegalArgumentException("Invalid start: " + start + " end: " + end
@@ -61,7 +58,7 @@ public final class CollectionUtils {
      * @return Whether c contains no elements.
      */
     @UsedForTesting
-    public static boolean isNullOrEmpty(@Nullable final Collection c) {
+    public static boolean isNullOrEmpty(final Collection c) {
         return c == null || c.isEmpty();
     }
 
@@ -71,7 +68,7 @@ public final class CollectionUtils {
      * @return Whether map contains no elements.
      */
     @UsedForTesting
-    public static boolean isNullOrEmpty(@Nullable final Map map) {
+    public static boolean isNullOrEmpty(final Map map) {
         return map == null || map.isEmpty();
     }
 }

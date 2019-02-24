@@ -20,8 +20,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * A class to help with handling Locales in string form.
@@ -104,8 +102,8 @@ public final class LocaleUtils {
      * @param testedLocale the locale to test.
      * @return a constant that measures how well the tested locale matches the reference locale.
      */
-    public static int getMatchLevel(@Nullable final String referenceLocale,
-            @Nullable final String testedLocale) {
+    public static int getMatchLevel(final String referenceLocale,
+            final String testedLocale) {
         if (StringUtils.isEmpty(referenceLocale)) {
             return StringUtils.isEmpty(testedLocale) ? LOCALE_FULL_MATCH : LOCALE_ANY_MATCH;
         }
@@ -168,8 +166,7 @@ public final class LocaleUtils {
      * @param localeString a string specification of a locale, in a format of "ll_cc_variant" where
      * "ll" is a language code, "cc" is a country code.
      */
-    @Nonnull
-    public static Locale constructLocaleFromString(@Nonnull final String localeString) {
+        public static Locale constructLocaleFromString(final String localeString) {
         synchronized (sLocaleCache) {
             if (sLocaleCache.containsKey(localeString)) {
                 return sLocaleCache.get(localeString);
@@ -204,7 +201,7 @@ public final class LocaleUtils {
         sRtlLanguageCodes.add("yi"); // Yiddish
     }
 
-    public static boolean isRtlLanguage(@Nonnull final Locale locale) {
+    public static boolean isRtlLanguage(final Locale locale) {
         return sRtlLanguageCodes.contains(locale.getLanguage());
     }
 }

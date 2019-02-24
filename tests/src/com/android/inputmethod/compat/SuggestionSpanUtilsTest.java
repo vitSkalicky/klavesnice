@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Locale;
 
-import javax.annotation.Nullable;
 
 @SmallTest
 public class SuggestionSpanUtilsTest extends AndroidTestCase {
@@ -64,7 +63,7 @@ public class SuggestionSpanUtilsTest extends AndroidTestCase {
 
     private static void assertSuggestionSpan(final String expectedText,
             final int reuiredSuggestionSpanFlags, final int requiredSpanFlags,
-            final String[] expectedSuggestions, @Nullable final Locale expectedLocale,
+            final String[] expectedSuggestions, final Locale expectedLocale,
             final CharSequence actualText) {
         assertTrue(TextUtils.equals(expectedText, actualText));
         assertTrue(actualText instanceof Spanned);

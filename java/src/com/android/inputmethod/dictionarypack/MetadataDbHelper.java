@@ -34,7 +34,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.TreeMap;
 
-import javax.annotation.Nullable;
 
 /**
  * Various helper functions for the state database
@@ -706,8 +705,7 @@ public class MetadataDbHelper extends SQLiteOpenHelper {
      * @param version the word list version.
      * @return the metadata about this word list.
      */
-    @Nullable
-    public static ContentValues getContentValuesByWordListId(final SQLiteDatabase db,
+        public static ContentValues getContentValuesByWordListId(final SQLiteDatabase db,
             final String id, final int version) {
         final Cursor cursor = db.query(METADATA_TABLE_NAME,
                 METADATA_TABLE_COLUMNS,

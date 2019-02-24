@@ -34,7 +34,6 @@ import com.android.inputmethod.latin.utils.SubtypeLocaleUtils;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
 
 @SmallTest
 public class LanguageOnSpacebarUtilsTests extends AndroidTestCase {
@@ -70,8 +69,7 @@ public class LanguageOnSpacebarUtilsTests extends AndroidTestCase {
         ZZ_QWERTY = findSubtypeOf(SubtypeLocaleUtils.NO_LANGUAGE, "qwerty");
     }
 
-    @Nonnull
-    private RichInputMethodSubtype findSubtypeOf(final String localeString,
+        private RichInputMethodSubtype findSubtypeOf(final String localeString,
             final String keyboardLayoutSetName) {
         final InputMethodSubtype subtype = mRichImm.findSubtypeByLocaleAndKeyboardLayoutSet(
                 localeString, keyboardLayoutSetName);

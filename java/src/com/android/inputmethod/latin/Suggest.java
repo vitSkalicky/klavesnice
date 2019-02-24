@@ -35,7 +35,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
 
 /**
  * This class loads a dictionary and provides a list of suggestions for a given sequence of
@@ -136,7 +135,7 @@ public final class Suggest {
     }
 
     private static SuggestedWordInfo getWhitelistedWordInfoOrNull(
-            @Nonnull final ArrayList<SuggestedWordInfo> suggestions) {
+            final ArrayList<SuggestedWordInfo> suggestions) {
         if (suggestions.isEmpty()) {
             return null;
         }

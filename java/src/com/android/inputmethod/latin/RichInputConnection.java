@@ -48,8 +48,6 @@ import com.android.inputmethod.latin.utils.TextRange;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Enrichment class for InputConnection to simplify interaction and add functionality.
@@ -335,8 +333,7 @@ public final class RichInputConnection implements PrivateCommandPerformer {
         }
     }
 
-    @Nullable
-    public CharSequence getSelectedText(final int flags) {
+        public CharSequence getSelectedText(final int flags) {
         return isConnected() ?  mIC.getSelectedText(flags) : null;
     }
 
@@ -653,8 +650,7 @@ public final class RichInputConnection implements PrivateCommandPerformer {
     }
 
     @SuppressWarnings("unused")
-    @Nonnull
-    public NgramContext getNgramContextFromNthPreviousWord(
+        public NgramContext getNgramContextFromNthPreviousWord(
             final SpacingAndPunctuations spacingAndPunctuations, final int n) {
         mIC = mParent.getCurrentInputConnection();
         if (!isConnected()) {

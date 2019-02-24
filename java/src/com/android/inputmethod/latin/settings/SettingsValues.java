@@ -38,8 +38,6 @@ import com.android.inputmethod.latin.utils.TargetPackageInfoGetterTask;
 import java.util.Arrays;
 import java.util.Locale;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * When you call the constructor of this class, you may want to change the current system locale by
@@ -93,8 +91,7 @@ public class SettingsValues {
     public final int mScreenMetrics;
 
     // From the input box
-    @Nonnull
-    public final InputAttributes mInputAttributes;
+        public final InputAttributes mInputAttributes;
 
     // Deduced settings
     public final int mKeypressVibrationDuration;
@@ -119,10 +116,10 @@ public class SettingsValues {
     public final float mKeyPreviewDismissEndXScale;
     public final float mKeyPreviewDismissEndYScale;
 
-    @Nullable public final String mAccount;
+    public final String mAccount;
 
     public SettingsValues(final Context context, final SharedPreferences prefs, final Resources res,
-            @Nonnull final InputAttributes inputAttributes) {
+            final InputAttributes inputAttributes) {
         mLocale = res.getConfiguration().locale;
         // Get the resources
         mDelayInMillisecondsToUpdateOldSuggestions =

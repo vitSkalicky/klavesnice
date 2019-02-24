@@ -18,7 +18,6 @@ package com.android.inputmethod.latin.accounts;
 
 import android.support.annotation.NonNull;
 
-import javax.annotation.Nullable;
 
 /**
  * Handles changes to account used to sign in to the keyboard.
@@ -32,7 +31,7 @@ public class AccountStateChangedListener {
      *
      * @param oldAccount the account that was signed out of.
      */
-    public static void onAccountSignedOut(@NonNull String oldAccount) {
+    public static void onAccountSignedOut(String oldAccount) {
     }
 
     /**
@@ -43,7 +42,7 @@ public class AccountStateChangedListener {
      *        May be null for a fresh sign-in.
      * @param newAccount the account being used for sign-in.
      */
-    public static void onAccountSignedIn(@Nullable String oldAccount, @NonNull String newAccount) {
+    public static void onAccountSignedIn(String oldAccount, String newAccount) {
     }
 
     /**
@@ -52,7 +51,7 @@ public class AccountStateChangedListener {
      * @param account the account being used for sync.
      * @param syncEnabled indicates whether sync has been enabled or not.
      */
-    public static void onSyncPreferenceChanged(@Nullable String account, boolean syncEnabled) {
+    public static void onSyncPreferenceChanged(String account, boolean syncEnabled) {
     }
 
     /**
@@ -61,7 +60,7 @@ public class AccountStateChangedListener {
      *
      * @param account the account to use for sync.
      */
-    public static void forceSync(@Nullable String account) {
+    public static void forceSync(String account) {
     }
 
     /**
@@ -70,6 +69,6 @@ public class AccountStateChangedListener {
      *
      * @param account the account to use for sync.
      */
-    public static void forceDelete(@Nullable String account) {
+    public static void forceDelete(String account) {
     }
 }

@@ -39,8 +39,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.HashMap;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Class grouping utilities for offline dictionary making.
@@ -122,14 +120,12 @@ public final class BinaryDictOffdeviceUtils {
     }
 
     public interface InputProcessor<T> {
-        @Nonnull
-        public T process(@Nonnull final InputStream input)
+                public T process(final InputStream input)
                 throws IOException, UnsupportedFormatException;
     }
 
     public static class CopyProcessor implements InputProcessor<File> {
-        @Override @Nonnull
-        public File process(@Nonnull final InputStream input) throws IOException,
+        @Override         public File process(final InputStream input) throws IOException,
                 UnsupportedFormatException {
             final File dst = File.createTempFile(PREFIX, SUFFIX);
             dst.deleteOnExit();
@@ -150,8 +146,7 @@ public final class BinaryDictOffdeviceUtils {
         // Arbitrarily limit the header length to 32k. Sounds like it would never be larger
         // than this. Revisit this if needed later.
         private final int MAX_HEADER_LENGTH = 32 * 1024;
-        @Override @Nonnull
-        public DictionaryHeader process(final InputStream input) throws IOException,
+        @Override         public DictionaryHeader process(final InputStream input) throws IOException,
                 UnsupportedFormatException {
             // Do everything as curtly and ad-hoc as possible for performance.
             final byte[] tmpBuffer = new byte[12];
@@ -220,10 +215,9 @@ public final class BinaryDictOffdeviceUtils {
      * for dictionary format until the processor does not throw an exception.
      * If the processor succeeds for none of the possible formats, the method returns null.
      */
-    @Nullable
-    public static <T> DecoderChainSpec<T> decodeDictionaryForProcess(@Nonnull final File src,
-            @Nonnull final InputProcessor<T> processor) {
-        @Nonnull DecoderChainSpec spec = new DecoderChainSpec();
+        public static <T> DecoderChainSpec<T> decodeDictionaryForProcess(final File src,
+            final InputProcessor<T> processor) {
+        DecoderChainSpec spec = new DecoderChainSpec();
         while (null != spec) {
             try {
                 final InputStream input = spec.getStream(src);
@@ -256,8 +250,7 @@ public final class BinaryDictOffdeviceUtils {
      * Get a decoder chain spec with a raw dictionary file. This makes a new file on the
      * disk ready for any treatment the client wants.
      */
-    @Nullable
-    public static DecoderChainSpec<File> getRawDictionaryOrNull(@Nonnull final File src) {
+        public static DecoderChainSpec<File> getRawDictionaryOrNull(final File src) {
         return decodeDictionaryForProcess(src, new CopyProcessor());
     }
 
