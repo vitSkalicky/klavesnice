@@ -21,7 +21,7 @@ function enableClicks(){
     rightArrow.onclick = function() {
         changeImg(index + 1);
     }
-    closeA.setAttribute("href", "./");
+    closeA.onclick = function(){window.history.back();};
 
     if (index == 0){
         leftArrow.style.display = "none";
@@ -40,7 +40,7 @@ function enableClicks(){
 function disableClicks(){
     leftArrow.onclick = null;
     rightArrow.onclick = null;
-    closeA.setAttribute("href", "");
+    closeA.onclick = null;
 
     //display is set to none, so that the is no :active animation played when they reappear
     leftArrow.style.display = "none";
@@ -129,7 +129,7 @@ function changeImg(index){
 
 //calculates image index, etc.
 function init(){
-    mainImg.setAttribute("src", "img/gallery/" + img);
+    mainImg.setAttribute("src", "./img/gallery/" + img);
     mainImg.setAttribute("alt", img);
     enableClicks();
     index = 0;

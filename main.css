@@ -1,5 +1,6 @@
 /* Genaral classes*/
 article, .card {background-color: #FFFFFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); border-radius: 3px;margin: 1em 5%;padding: 1em;}
+a {text-decoration: none; color: black}
 .left {float: left;}
 .right {float: right;}
 .none {float: none}
@@ -9,7 +10,7 @@ article, .card {background-color: #FFFFFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.1
 .big-button:hover {box-shadow:0 2px 20px 3px rgba(0,0,0,0.14); border: none;}
 .big-button:active {box-shadow: none; background-color: #386f08; border: none;}
 
-body {background-image: url("img/background.jpg"); background-repeat: repeat; background-attachment: fixed; background-size: 30em; font-family: 'Roboto', sans-serif;}
+body {background-image: url("img/background.jpg"); background-repeat: repeat; background-attachment: fixed; background-size: 30em; font-family: 'Roboto', sans-serif;margin: 0}
 div.root {margin: 0;size: auto 100%}
 header.card { border-radius: 5px 5px 2px 2px; font-size: 1em; padding: 0 0 1em 0;}
 header img.icon {margin: 0 10px 10px 10px; float: left}
@@ -24,6 +25,29 @@ main {padding:0; margin: 0}
 article.informace {padding: 1em 0 0 0}
 main p {padding: 0.1em 1em}
 
+footer {background: #FFFFFF; padding: 1em; margin: 0;box-shadow: 0 -5px 10px rgba(0,0,0,0.2)}
+
+/* Language toggle */
+div.lang-text {float: left; margin: 0.3em 0.5em 0.3em 0.3em}
+.lang-selected {margin-top: -0.3em; background-color: #689f38; padding: 0.3em; float: left;border: 0.1em solid #689f38;height: 1em; font-size: 1em;}
+.lang-other {margin-top: -0.3em; padding: 0.3em; ; float: left; border: 0.1em solid #689f38; height: 1em;font-size: 1em; border-radius: 2px;}
+.lang-other:hover {background-color: #487f18; color: #FFFFFF; transition: ease-in-out 200ms;}
+.lang-divider-left {height: 0; width: 0; border-top: 1.65em solid #689f38; border-right: 1em solid transparent; float: left; margin: -0.3em 0 -0.3em -0.3em}
+.lang-divider-right {height: 0; width: 0; border-top: 1.65em solid transparent; border-right: 1em solid #689f38; float: right; margin: -0.3em -0.33em -0.3em 0.5em}
+.lang-left {border-radius: 3px 0 0 3px}
+.lang-right {border-radius: 0 3px 3px 0}
+.lang-icon {float: left; margin-top: 0.1em}
+.lang-wrapper {float: left; margin-top: 0.3em; margin-bottom: 0.3em}
+#lang-x {float: right; cursor: default; font-size: 1.5em}
+#lang-x:hover {color: red; transition: 0.2s}
+
+.lang-info {display: none; opacity: 0; transition: cubic-bezier(0, 0, 0, 1) 0.5s;}
+.lang-info::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 div.buttons-box {float: right; margin: 1em 0 0 0}
 input {float: none;display: block;margin: 0 auto; border: 2px solid; border-color: #689f38;border-radius: 3px; padding: 0.3em 0.5em}
 button {font-size: 1em;}
@@ -34,13 +58,13 @@ button.submit {color: #FFFFFF; background-color: #689f38; padding: 0.6em 1em; bo
 .popup {
     position: fixed;
     text-align: center;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.2);
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     opacity: 0.0;
-    transition: opacity 0.3s linear;
+    transition: opacity 0.3s cubic-bezier(0, 0, 0, 1);
     /*display: none;*/
     pointer-events: none;
     overflow: auto;
