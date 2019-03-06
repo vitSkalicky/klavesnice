@@ -7,18 +7,18 @@
     <title>Česká diakritická klávesnice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="gallery-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../gallery-style.css" />
 	<link rel="shortcut icon" href="img/ic_launcher.png" />
 </head>
 <body>
 	 
 	<div class="arrows-container">
-		<div id="right-arrow-box" class="arrow-box"><img class="arrow" src="icon/arrow-right.svg"></div>
-		<div id="left-arrow-box" class="arrow-box"><img class="arrow" src="icon/arrow-left.svg"></div>
+		<div id="right-arrow-box" class="arrow-box"><img class="arrow" src="../icon/arrow-right.svg"></div>
+		<div id="left-arrow-box" class="arrow-box"><img class="arrow" src="../icon/arrow-left.svg"></div>
 	</div>
-	<a id="close-a"><img class="close" src="icon/close.svg"></a>
+	<a id="close-a"><img class="close" src="../icon/close.svg"></a>
 
-	<div class="img-box"><img id="main-img" src="img/gallery/." alt="."></div>
+	<div class="img-box"><img id="main-img" src="img/gallery/klavesnice_navysku.png" alt="klavesnice_navysku.png"></div>
 	<img id="next" class="loader">
 	<img id="prev" class="loader">
 </body>
@@ -29,4 +29,4 @@
 	location.search.substr(1).split("&").forEach(function(item){getParams[item.split("=")[0]] = item.split("=")[1]}) //fills params object with get parameters.
 	var img = getParams["img"];
 </script>
-<script src="gallery.js"></script>
+<script src="../gallery.js"></script>
