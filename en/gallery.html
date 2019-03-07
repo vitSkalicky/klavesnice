@@ -18,13 +18,13 @@
 	</div>
 	<a id="close-a"><img class="close" src="../icon/close.svg"></a>
 
-	<div class="img-box"><img id="main-img" src="img/gallery/klavesnice_navysku.png" alt="klavesnice_navysku.png"></div>
+	<div class="img-box"><img id="main-img" src="img/gallery/." alt="."></div>
 	<img id="next" class="loader">
 	<img id="prev" class="loader">
 </body>
 
 <script>
-	var images = ["klavesnice_nasirku.png", "klavesnice_navysku.png", "screenshot1.png", "screenshot2.png", "screenshot3.png", "screenshot4.png"];
+	var images = ["01screenshot1.png", "02screenshot2.png", "03screenshot3.png", "04screenshot4.png", "10klavesnice_navysku.png", "11klavesnice_nasirku.png"];
 	var getParams = {};
 	location.search.substr(1).split("&").forEach(function(item){getParams[item.split("=")[0]] = item.split("=")[1]}) //fills params object with get parameters.
 	var img = getParams["img"];
