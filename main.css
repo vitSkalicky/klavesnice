@@ -1,6 +1,7 @@
 /* Genaral classes*/
 article, .card {background-color: #FFFFFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); border-radius: 3px;margin: 1em 5%;padding: 1em;}
-a {text-decoration: none; color: black}
+a {text-decoration: none; color: #386f08;}
+a:hover {text-decoration: underline;}
 .left {float: left;}
 .right {float: right;}
 .none {float: none}
@@ -15,7 +16,8 @@ div.root {margin: 0;size: auto 100%}
 header.card { border-radius: 5px 5px 2px 2px; font-size: 1em; padding: 0 0 1em 0;}
 header img.icon {margin: 0 10px 10px 10px; float: left}
 header div.header-text-container {min-height: 144px}
-a.download-button {font-size: 1.3em}
+a.download-button {font-size: 1.3em;}
+a.download-button:hover {text-decoration: none}
 div.download-div {padding: 1em; margin: 1em 1em 0 0; float: right;}
 h1 {margin: 1.5em 0.5em 0em 0.5em}
 h2 {text-align: center; margin: 0.3em 0.1em 0.5em 0.1em}
@@ -30,14 +32,15 @@ footer {background: #FFFFFF; padding: 1em; margin: 0;box-shadow: 0 -5px 10px rgb
 /* Language toggle */
 div.lang-text {float: left; margin: 0.3em 0.5em 0.3em 0.3em}
 .lang-selected {margin-top: -0.3em; background-color: #689f38; padding: 0.3em; float: left;border: 0.1em solid #689f38;height: 1em; font-size: 1em;}
-.lang-other {margin-top: -0.3em; padding: 0.3em; ; float: left; border: 0.1em solid #689f38; height: 1em;font-size: 1em; border-radius: 2px;}
+.lang-other {margin-top: -0.3em; padding: 0.3em; ; float: left; border: 0.1em solid #689f38; height: 1em;font-size: 1em;}
 .lang-other:hover {background-color: #487f18; color: #FFFFFF; transition: ease-in-out 200ms;}
 .lang-divider-left {height: 0; width: 0; border-top: 1.65em solid #689f38; border-right: 1em solid transparent; float: left; margin: -0.3em 0 -0.3em -0.3em}
-.lang-divider-right {height: 0; width: 0; border-top: 1.65em solid transparent; border-right: 1em solid #689f38; float: right; margin: -0.3em -0.33em -0.3em 0.5em}
+.lang-divider-right {height: 0; width: 0; border-top: 1.65em solid transparent; border-right: 1em solid #689f38; float: right; margin: -0.3em -0.33em -0.3em 0.3em}
 .lang-left {border-radius: 3px 0 0 3px}
 .lang-right {border-radius: 0 3px 3px 0}
 .lang-icon {float: left; margin-top: 0.1em}
 .lang-wrapper {float: left; margin-top: 0.3em; margin-bottom: 0.3em}
+.lang-wrapper a {color: black}
 #lang-x {float: right; cursor: default; font-size: 1.5em}
 #lang-x:hover {color: red; transition: 0.2s}
 
