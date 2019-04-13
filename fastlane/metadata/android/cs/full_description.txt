@@ -1,0 +1,10 @@
+Toto je upravená AOSP klávesnice, která obsahuje rychlé psaní diakritiky, podobně jako na iPhonu. Na pravé straně klávesnice se nachází klávesy háčku a čárky pro rychlejší psaní. Bohužel se mi nepodařilo zprovoznit automatické opravy (Snažil jsem se. Hodně).
+
+Dalším drobným vylepšením je ovládání tažením, díky kterému se můžete snadno a přesně orientovat v textu.
+
+Hlavní funkce:
+
+* Klávesy háčku a čárky pro rychlejší psaní
+* Použitelné pro jakýkoliv jazyk, který používá diakritiku (Čeština, Slovenština,...)
+* Tažením po klávesnici se můžete přesně orientovat v textu.
+* Moderní vzhled
