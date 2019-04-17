@@ -10,7 +10,7 @@ android {
     }
     sourceSets {
         main {
-            root = ''
+            root = '.'
         }
     }
     externalNativeBuild {

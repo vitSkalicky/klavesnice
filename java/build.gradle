@@ -17,7 +17,7 @@ android {
     }
     sourceSets {
         main {
-            root = ''
+            root = '.'
             java.srcDirs = ['src', '../java-overridable/src', '../inputmethodcommon/java']
         }
     }
