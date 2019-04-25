@@ -8,6 +8,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "0.1"
+
+        // Enabling multidex support.
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -31,6 +34,8 @@ android {
         abortOnError false
     }
 }
+
+
 
 dependencies {
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
