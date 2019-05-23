@@ -1,17 +1,24 @@
 /* Genaral classes*/
-article, .card {background-color: #FFFFFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); border-radius: 3px;margin: 1em 5%;padding: 1em;}
+article, .card {background-color: #FFFFFF; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); border-radius: 3px;padding: 1em;}
+.top-nav-bar {top: 0; left: 0; right: 0; background-color: #689f38; padding: 0.7em; color: #FFFFFF; box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);}
+.top-nav-bar .back-text {padding-left: 0.2em}
+.top-nav-bar * {float: left;}
 a {text-decoration: none; color: #386f08;}
 a:hover {text-decoration: underline;}
+a.none {text-decoration: none; color: #FFFFFF;}
+a.none:hover {text-decoration: none;}
 .left {float: left;}
 .right {float: right;}
 .none {float: none}
 .text-center {text-align: center}
 .big-button {text-decoration: none; color: #FFFFFF; background-color: #689f38; padding: 0.6em 1em;border: none; border-radius: 3px; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14); transition: box-shadow 0.3s}
 .big-button:focus {border: none;outline: none;background-color: #386f08}
-.big-button:hover {box-shadow:0 2px 20px 3px rgba(0,0,0,0.14); border: none;}
+.big-button:hover {text-decoration: none; box-shadow:0 2px 20px 3px rgba(0,0,0,0.14); border: none;}
 .big-button:active {box-shadow: none; background-color: #386f08; border: none;}
+.center {margin: 0 auto}
+p.p-center {text-align: center}
 
-body {background-image: url("img/background.jpg"); background-repeat: repeat; background-attachment: fixed; background-size: 30em; font-family: 'Roboto', sans-serif;margin: 0}
+body {background-image: url("img/background.jpg"); background-repeat: repeat; background-attachment: fixed; background-size: 30em; font-family:/* Roboto,*/ sans-serif;margin: 0}
 div.root {margin: 0;size: auto 100%}
 header.card { border-radius: 5px 5px 2px 2px; font-size: 1em; padding: 0 0 1em 0;}
 header img.icon {margin: 0 10px 10px 10px; float: left}
@@ -21,11 +28,21 @@ a.download-button:hover {text-decoration: none}
 div.download-div {padding: 1em; margin: 1em 1em 0 0; float: right;}
 h1 {margin: 1.5em 0.5em 0em 0.5em}
 h2 {text-align: center; margin: 0.3em 0.1em 0.5em 0.1em}
-p.autor {margin: 0 0.5em 1em 0.5em}
+.top-nav-bar h1 {margin: 0.1em auto; font-size: 1em; float: none; text-align: center}
+.grey {color: grey}
+.autor {margin: 0 0.5em 0.4em 0.5em}
+.small-margin {margin: 0 0.5em 0.1em 0.5em}
 div.new {background-color: #ddf3eb; color: #007f4b; margin: 0.5em 0 0.5em 0; padding: 0.2em 1em}
 main {padding:0; margin: 0}
 article.informace {padding: 1em 0 0 0}
-main p {padding: 0.1em 1em}
+article.informace p {padding: 0.1em 1em}
+main p {padding: 0.1em; line-height: 1.5}
+.badge {border: none;outline: none;}
+.badge:hover {box-shadow:0 2px 20px 3px rgba(0,0,0,0.3); transition: box-shadow 0.3s}
+.badge:focus {outline: none}
+.badge:active {box-shadow:0 2px 20px 1px rgba(0,0,0,0.1); transition: box-shadow 0.3s}
+
+
 
 footer {background: #FFFFFF; padding: 1em; margin: 0;box-shadow: 0 -5px 10px rgba(0,0,0,0.2)}
 
@@ -51,13 +68,16 @@ div.lang-text {float: left; margin: 0.3em 0.5em 0.3em 0.3em}
   display: table;
 }
 
-div.buttons-box {float: right; margin: 1em 0 0 0}
+/* Buttons */
+div.buttons-box {float: none; text-align: right; margin: 1em 0 0 0}
 input {float: none;display: block;margin: 0 auto; border: 2px solid; border-color: #689f38;border-radius: 3px; padding: 0.3em 0.5em}
-button {font-size: 1em;}
-button.light {border: none; background: none; color: #386f08;}
-button.light:hover {outline: none}
+button {font-size: 1em; text-transform: uppercase;}
+button.light {border: none; background: none; padding: 0.2em;letter-spacing: 1px; color: #386f08; border-radius: 1em; transition: linear 0.3s background-color; transition: linear 0.1s border-radius}
+button.light:hover {outline: none; background-color: lightgrey; border-radius: 2px}
+button.light:active {background-color: grey; border-radius: 2px}
 button.submit {color: #FFFFFF; background-color: #689f38; padding: 0.6em 1em; border:none; border-radius: 3px; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14); transition: box-shadow 0.3s}
 
+/* Popup */
 .popup {
     position: fixed;
     text-align: center;
@@ -73,14 +93,14 @@ button.submit {color: #FFFFFF; background-color: #689f38; padding: 0.6em 1em; bo
     overflow: auto;
   }
    
-  .popup:before {
+.popup::before {
     content: '\200B';
     display: inline-block;
     height: 100%; 
     vertical-align: middle;
    }
    
-  .dialog {
+.dialog {
     display: inline-block;
     vertical-align: middle;
     padding: 1em;
@@ -92,24 +112,36 @@ button.submit {color: #FFFFFF; background-color: #689f38; padding: 0.6em 1em; bo
 .top-1 {position: relative; top: 0; left: 0;}
 .top-2 {position: absolute; top: 60%; left: 30%; width: 40%;}
 
+/* Back button */
+.back-arrow {float: left; height: 1.5em;}
+.back-text {margin-top: 0.2em}
+
+/* Mini gallery */
 div.gallery {overflow: auto; white-space: nowrap;}
 div.gallery img {display: inline-block; transition: box-shadow 0.5s}
 div.gallery a {margin: 0.5em}
 div.gallery a:focus { border: none; outline: none}
 div.gallery img:hover, div.gallery a:focus img {box-shadow: 0 2px 12px 0 rgba(0,0,0,0.35);}
 
+/* Resposiveness */
+  
 @media only screen and (min-width: 601px){
-.phoneonly {display: none}
-div.gallery img {width: 20%}
+  .phoneonly {display: none}
+  div.gallery img {width: 20%}
+  article, .card {margin: 1em 20%;}
+}
+
+@media only screen and (max-width: 1100px){
+  article, .card {margin: 1em 5%;}
 }
 
 @media only screen and (max-width: 600px){
-    div.download-div {float: none; margin: 0 auto}
-    .pconly {display: none}
-    header img.icon {float: none; margin: 0 auto}
-    /*header img.top {display: none}*/
-    header {text-align: center}
+  div.download-div {float: none; margin: 0 auto}
+  .pconly {display: none}
+  header img.icon {float: none; margin: 0 auto}
+  /*header img.top {display: none}*/
+  header {text-align: center}
 
-    div.gallery img {width: 60%}
+  div.gallery img {width: 60%}
 }
 
