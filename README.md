@@ -16,6 +16,21 @@ Main features:
 
 More on [https://vitSkalicky.github.io/klavesnice/en](https://vitSkalicky.github.io/klavesnice/en)
 
+
+## Download
+
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+    alt="Get it on F-Droid"
+    height="80">](https://f-droid.org/packages/cz.vitSkalicky.klavesnice/)
+    [<img src="https://vitskalicky.github.io/klavesnice/img/uptodown.png"
+    alt="Android app on Uptodown"
+    height="60">](https://czech-diacritic-keyboard.en.uptodown.com/) [<img src="https://cdn6.aptoide.com/includes/themes/2014/images/aptoide_badge.svg?timestamp=timestamp=20190318"
+    alt="Get it on Aptoide"
+    height="60">](https://czech-diacritic-keyboard.en.aptoide.com/)
+
+
+
+
 # Česká Diakritická Klávesnice
 
 Toto je upravená AOSP klávesnice, která obsahuje rychlé psaní diakritiky, podobně jako na iPhonu. Na pravé straně klávesnice se nachází klávesy háčku a čárky pro rychlejší psaní. Bohužel se mi nepodařilo zprovoznit automatické opravy (Snažil jsem se. Hodně).
