@@ -6,8 +6,8 @@ android {
         applicationId "cz.vitSkalicky.klavesnice"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 1
-        versionName "0.1"
+        versionCode 2
+        versionName "1.0"
 
         // Enabling multidex support.
         multiDexEnabled true

@@ -16,7 +16,6 @@ Main features:
 
 More on [https://vitSkalicky.github.io/klavesnice/en](https://vitSkalicky.github.io/klavesnice/en)
 
-
 ## Download
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
@@ -27,9 +26,6 @@ More on [https://vitSkalicky.github.io/klavesnice/en](https://vitSkalicky.github
     height="60">](https://czech-diacritic-keyboard.en.uptodown.com/) [<img src="https://cdn6.aptoide.com/includes/themes/2014/images/aptoide_badge.svg?timestamp=timestamp=20190318"
     alt="Get it on Aptoide"
     height="60">](https://czech-diacritic-keyboard.en.aptoide.com/)
-
-
-
 
 # Česká Diakritická Klávesnice
 

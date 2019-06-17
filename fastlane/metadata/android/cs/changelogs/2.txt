@@ -1,0 +1,1 @@
+* Diakritické klávesy nyní "nezvedají" shift

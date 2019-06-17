@@ -1,0 +1,1 @@
+* Accent keys don't cancel shift anymore
