@@ -1,5 +1,9 @@
 ![logo][logo image]
 
+⚠ This project is no longer developed ⚠  
+I will happily accept your pull request, but I won't add new features or fix bugs myself.  
+(maybe it is a better idea to add accent keys to a [different, maintained keyboard](https://github.com/rkkr/simple-keyboard) than trying to fix this one)
+
 # Czech Diacritic Keyboard
 
 This is modified AOSP keyboard, which features iPhone-like writing of diacritics. Caron an acute keys are added to the right of the keyboard for faster typing. The diacritic keys best fit Czech language, but are suitable for any language that uses them.
